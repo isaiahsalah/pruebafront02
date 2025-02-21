@@ -1,8 +1,7 @@
 import ComponenteA from '@/components/ComponenteA';
 import ComponenteB from '@/components/ComponenteB';
-import { AnalyticsProvider, useAnalytics } from '@/providers/AnalyticsContext';
-import { Box, Card, CardContent, Container, Divider, Grid2, Typography } from '@mui/material'
-import React, { useEffect } from 'react'
+import { useAnalytics } from '@/providers/AnalyticsContext';
+import { Box, Container, Divider, Grid2, Typography } from '@mui/material'
 
 const Page3 = () => {
     const { state } = useAnalytics();

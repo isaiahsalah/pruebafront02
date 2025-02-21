@@ -1,6 +1,6 @@
 "use client"
 import { Camera, CameraResultType } from '@capacitor/camera';
-import { Button, Card, CardActions, CardContent, Container, Grid2, Typography } from '@mui/material';
+import { Button, Card, CardActions, CardContent, Container, Typography } from '@mui/material';
 import Image from 'next/image';
 import { useState } from 'react';
 

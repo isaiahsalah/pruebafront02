@@ -1,40 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Prueba Técnica: Next.js + React + MUI + TypeScript + Capacitor
 
-## Getting Started
+Este repositorio contiene tres ejercicios que demuestran el uso de **Next.js**, **React**, **Material-UI (MUI)**, **TypeScript** y **Capacitor**.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Ejercicios
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 1. Fundamentos de Next.js + React + MUI
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- Muestra datos de una API pública (JSONPlaceholder) en una lista con MUI.
+- Usa `getStaticProps` y un tema personalizado de MUI.
+- Incluye interactividad con `useState`.
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### 2. Uso de Plugins de Capacitor
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+- Integra el plugin de **Geolocalización** y **Cámara** de Capacitor.
+- Obtiene y muestra la ubicación del usuario en una interfaz con MUI.
+- Obtiene y muestra la cárama del usuario en una interfaz con MUI.
+- Maneja errores como la falta de soporte en ciertos entornos.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. Gestión de Estado con React Hooks
 
-## Learn More
+- Crea un contexto (`AnalyticsContext`) para rastrear eventos de `hover` y `click`.
+- Implementa dos componentes: una lista que registra `hover` y un botón que registra `click`.
+- Muestra el conteo de eventos en un panel de análisis.
+- Añadir un **Textfield** para aumentar lso datos de la lista hover.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+## Instalación
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/isaiahsalah/pruebafront02.git
+   cd pruebafront02
+   ```
+2. Instala dependencias:
 
-## Deploy on Vercel
+   ```bash
+   npm install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Ejecuta el proyecto:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+   ```bash
+   npm run dev
+   ```
+
+4. Abre http://localhost:3000 en tu navegador.
+
+## Configuración de Capacitor
+
+1. Sincroniza Capacitor:
+
+   ```bash
+   npx cap sync
+   ```
+
+## Tecnologías
+
+- Next.js: Enrutamiento y SSR.
+
+- React: Componentes y estado.
+
+- MUI: Diseño de UI.
+
+- TypeScript: Tipado estático.
+
+- Capacitor: APIs nativas.
+
+¡Gracias por la oportunidad! 😊

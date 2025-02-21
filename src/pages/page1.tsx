@@ -1,5 +1,5 @@
 import themePage1 from '@/styles/theme';
-import { Container, CssBaseline, Divider, Grid2, List, ListItem, ListItemText, Paper, ThemeProvider, Typography } from '@mui/material';
+import { Container, CssBaseline, List, ListItem, ListItemText, Paper, ThemeProvider, Typography } from '@mui/material';
 import { GetServerSideProps } from 'next';
 import React from 'react'
 // Definir el tipo para los datos que vamos a recibir
