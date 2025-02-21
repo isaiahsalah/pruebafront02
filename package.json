@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build && next export -o public",
+    "build": "next build",
+    "buildAd": "next build && next export -o public",
     "start": "next start",
     "lint": "next lint",
     "sync": "npx cap sync"

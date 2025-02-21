@@ -77,7 +77,6 @@ Este repositorio contiene tres ejercicios que demuestran el uso de **Next.js**, 
    appId: 'com.example.app',
    appName: 'nextjs-capacitor-app',
    webDir: 'public', // Apunta a la carpeta "public"
-   bundledWebRuntime: false,
    };
 
    export default config;
@@ -87,13 +86,13 @@ Este repositorio contiene tres ejercicios que demuestran el uso de **Next.js**, 
    1. Agrega este script en package.json:
       ```bash
       "scripts": {
-      "build": "next build && next export -o public",
-      "sync": "npx cap sync"
+         "buildAd": "next build && next export -o public",
+         "sync": "npx cap sync"
       }
       ```
    2. Agrega este script en package.json:
       ```bash
-      npm run build
+      npm run buildAd
       npx cap sync
       ```
 
