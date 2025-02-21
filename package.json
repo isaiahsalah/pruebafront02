@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "next build && next export -o public",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "sync": "npx cap sync"
   },
   "dependencies": {
     "@capacitor/camera": "^7.0.0",
