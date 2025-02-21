@@ -5,7 +5,7 @@ const HomePage = () => {
   return (
 
     <div>
-      <Typography variant='h2'>Página Principal</Typography>
+      <Typography variant='h2'>Prueba Técnica</Typography>
       <ul>
         <li>
           <Link href="/page1">Ir a la Página 1</Link>
