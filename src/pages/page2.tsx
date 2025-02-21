@@ -90,9 +90,7 @@ const Page2 = () => {
                     <Button variant="contained" color="primary" onClick={handleTakePhoto}>
                         Tomar Foto
                     </Button>
-                    <Button variant="contained" color="primary" onClick={handleTakePhoto}>
-                        Obtener Ubicación
-                    </Button>
+
                 </CardActions>
             </Card>
             <Card>

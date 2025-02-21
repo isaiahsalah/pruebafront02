@@ -51,11 +51,51 @@ Este repositorio contiene tres ejercicios que demuestran el uso de **Next.js**, 
 
 ## Configuración de Capacitor
 
-1. Sincroniza Capacitor:
+1. Crear index.html en public
 
    ```bash
-   npx cap sync
+   <!DOCTYPE html>
+   <html lang="es">
+   <head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Next.js + Capacitor</title>
+   </head>
+   <body>
+   <div id="root"></div>
+   <script src="/_next/static/chunks/pages/_app.js"></script>
+   </body>
+   </html>
    ```
+
+2. Configurar capacitor.config.ts
+
+   ```bash
+   import { CapacitorConfig } from '@capacitor/cli';
+
+   const config: CapacitorConfig = {
+   appId: 'com.example.app',
+   appName: 'nextjs-capacitor-app',
+   webDir: 'public', // Apunta a la carpeta "public"
+   bundledWebRuntime: false,
+   };
+
+   export default config;
+   ```
+
+3. Compilar y Sincronizar
+   1. Agrega este script en package.json:
+      ```bash
+      "scripts": {
+      "build": "next build && next export -o public",
+      "sync": "npx cap sync"
+      }
+      ```
+   2. Agrega este script en package.json:
+      ```bash
+      npm run build
+      npx cap sync
+      ```
 
 ## Tecnologías
 
