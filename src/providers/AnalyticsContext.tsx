@@ -1,26 +1,21 @@
 import React, { createContext, useReducer, useContext, ReactNode } from 'react';
 
-// Definir la interfaz del estado
 interface AnalyticsState {
     hoverEvents: number;
     clicks: number;
 }
 
-// Definir las acciones
 type AnalyticsAction =
     | { type: 'LOG_HOVER' }
     | { type: 'LOG_CLICK' };
 
-// Definir el tipo del contexto
 interface AnalyticsContextType {
     state: AnalyticsState;
     dispatch: React.Dispatch<AnalyticsAction>;
 }
 
-// Crear el contexto
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
-// Reducer para manejar las acciones
 const analyticsReducer = (state: AnalyticsState, action: AnalyticsAction): AnalyticsState => {
     switch (action.type) {
         case 'LOG_HOVER':
@@ -32,7 +27,6 @@ const analyticsReducer = (state: AnalyticsState, action: AnalyticsAction): Analy
     }
 };
 
-// Proveedor del contexto
 export const AnalyticsProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     const [state, dispatch] = useReducer(analyticsReducer, { hoverEvents: 0, clicks: 0 });
 
@@ -43,7 +37,6 @@ export const AnalyticsProvider: React.FC<{ children: ReactNode }> = ({ children 
     );
 };
 
-// Hook personalizado para usar el contexto
 export const useAnalytics = () => {
     const context = useContext(AnalyticsContext);
     if (!context) {

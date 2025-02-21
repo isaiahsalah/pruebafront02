@@ -17,10 +17,8 @@ const Page2 = () => {
         try {
             const { Geolocation } = await import('@capacitor/geolocation');
 
-            // Verificar permisos de ubicación
             const permissionStatus = await Geolocation.checkPermissions();
             if (permissionStatus.location !== 'granted') {
-                // Solicitar permisos de ubicación
                 const requestStatus = await Geolocation.requestPermissions();
                 if (requestStatus.location !== 'granted') {
                     throw new Error('Permisos de ubicación no concedidos.');
@@ -28,7 +26,6 @@ const Page2 = () => {
             }
 
 
-            // Obtener la ubicación actual
             const position = await Geolocation.getCurrentPosition();
 
             // Guardar la ubicación en el estado
